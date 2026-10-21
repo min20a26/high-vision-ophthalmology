@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="High Vision Ophthalmology portfolio demo with a sample appointment and eye-health intake flow.">
+  <meta name="theme-color" content="#f6f7f2">
+  <title>High Vision Ophthalmology | See what’s possible</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="demo-strip"><span class="demo-dot"></span> Portfolio demo <span class="strip-separator">•</span> Example details only <span class="strip-separator">•</span> Please don’t enter real patient information</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="High Vision Ophthalmology home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 32"><path d="M2 16S9 4 22 4s20 12 20 12-7 12-20 12S2 16 2 16Z"/><circle cx="22" cy="16" r="7"/><circle class="pupil" cx="22" cy="16" r="2.4"/></svg></span>
+      <span class="brand-name">High Vision <small>OPHTHALMOLOGY</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#approach">Our approach</a><a href="#insurance">Insurance & fees</a><a href="#office">Office</a>
+      <a class="nav-cta" href="#booking">Find an appointment <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> CLEAR CARE. A BRIGHTER VIEW.</p>
+        <h1>See what’s<br><em>possible.</em></h1>
+        <p class="hero-intro">Thoughtful eye care starts with listening. Find a visit time, tell us what brings you in, and take the next step with confidence.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#booking">Find an appointment <span aria-hidden="true">↗</span></a><a class="text-link" href="#approach">Get to know us <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-note"><span class="note-icon">✳</span><span>Care for the details.<br><b>Confidence for the whole picture.</b></span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative abstract illustration of an eye and horizon" role="img">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-sun"></div>
+        <svg class="eye-art" viewBox="0 0 520 340" fill="none" aria-hidden="true"><path d="M31 171c53-78 129-118 228-118s175 40 230 118c-55 78-131 117-230 117S84 249 31 171Z" stroke="currentColor" stroke-width="2"/><circle cx="259" cy="171" r="76" stroke="currentColor" stroke-width="2"/><circle cx="259" cy="171" r="49" fill="currentColor"/><circle cx="276" cy="154" r="12" fill="#F7F5EC"/><path d="M32 171h100m258 0h100" stroke="currentColor" stroke-width="1" opacity=".35"/></svg>
+        <span class="art-caption caption-top">A CLOSER LOOK</span><span class="art-caption caption-bottom">CARE THAT SEES YOU</span><span class="art-stamp">HV<br><small>20 / 20</small></span>
+      </div>
+    </section>
+    <section id="approach" class="intro-band"><div class="wrap intro-inner"><p class="eyebrow">A GOOD VISIT STARTS HERE</p><h2>Good care begins with<br>a <em>good conversation.</em></h2><p>From routine checkups to a new concern, we make room for your questions and your whole story.</p><div class="principles"><div><span>01</span><b>We listen first</b><small>Your concerns guide the conversation.</small></div><div><span>02</span><b>We explain clearly</b><small>Know what comes next and why.</small></div><div><span>03</span><b>We plan together</b><small>Care should fit your needs.</small></div></div></div></section>
+    <section id="booking" class="booking-section wrap">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT STEP</p><h2>Let’s find a time<br>to <em>see you.</em></h2></div><p class="section-aside">Choose a sample opening and share a little about your visit. This demo does not make a real appointment.</p></div>
+      <div class="booking-layout">
+        <form id="appointment-form" class="booking-card" novalidate>
+          <div class="stepper" aria-label="Appointment form steps"><span class="step-dot active" data-step-dot="1">01</span><i></i><span class="step-dot" data-step-dot="2">02</span><i></i><span class="step-dot" data-step-dot="3">03</span></div>
+          <section class="form-step active" data-step="1" aria-labelledby="step1-title">
+            <p class="step-kicker">STEP 01 / 03</p><h3 id="step1-title">Choose a day & time</h3><p class="step-description">These are example openings only and aren’t connected to a clinic calendar.</p>
+            <div id="date-options" class="date-options" role="radiogroup" aria-label="Available sample days"></div>
+            <div class="field-label-row"><span class="field-label">Available times</span><span id="chosen-day-label" class="muted-label"></span></div>
+            <div id="time-options" class="time-options" role="radiogroup" aria-label="Available sample times"></div>
+            <p id="availability-note" class="availability-note"><span class="live-dot"></span> Sample openings — not live availability</p>
+            <div class="form-controls"><span></span><button class="button button-dark next-step" type="button">Continue <span>→</span></button></div>
+          </section>
+          <section class="form-step" data-step="2" aria-labelledby="step2-title" hidden>
+            <p class="step-kicker">STEP 02 / 03</p><h3 id="step2-title">A few details about you</h3><p class="step-description">Please use sample information only. Nothing entered here is sent or saved.</p>
+            <div class="field-grid"><label>First name<input name="firstName" autocomplete="given-name" required placeholder="First name"></label><label>Last name<input name="lastName" autocomplete="family-name" required placeholder="Last name"></label><label>Date of birth<input name="dob" type="date" autocomplete="bday" required></label><label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="(555) 555-0123"></label></div>
+            <fieldset class="choice-fieldset"><legend>How will you pay for your visit?</legend><div class="choice-row"><label class="radio-card"><input type="radio" name="paymentType" value="insurance" checked><span><b>Use insurance</b><small>Choose an example plan</small></span></label><label class="radio-card"><input type="radio" name="paymentType" value="selfpay"><span><b>Self-pay</b><small>See sample visit prices</small></span></label></div></fieldset>
+            <div id="insurance-fields" class="conditional-panel"><label class="full-field">Insurance plan<select name="insurancePlan" id="insurance-select" required></select></label><p class="tiny-note">Plan names are examples. Coverage and acceptance have not been verified.</p><div class="field-grid"><label>Member ID<input name="memberId" placeholder="Example ID only"></label><label>Expected copay<input name="copay" inputmode="decimal" placeholder="To be confirmed"></label><label>Cardholder first name<input name="cardFirstName" placeholder="As shown on card"></label><label>Cardholder last name<input name="cardLastName" placeholder="As shown on card"></label></div><p class="tiny-note">A real office would verify benefits and copay with your insurer. Don’t enter actual insurance information in this demo.</p></div>
+            <div id="selfpay-fields" class="conditional-panel selfpay-panel" hidden><div class="price-row"><span>New patient visit <b id="new-patient-price"></b></span><span>Follow-up visit <b id="followup-price"></b></span></div><p class="tiny-note">Illustrative prices only; confirm actual fees with the clinic.</p></div>
+            <div class="form-controls"><button class="button button-quiet previous-step" type="button">← Back</button><button class="button button-dark next-step" type="button">Continue <span>→</span></button></div>
+          </section>
+          <section class="form-step" data-step="3" aria-labelledby="step3-title" hidden>
+            <p class="step-kicker">STEP 03 / 03</p><h3 id="step3-title">Tell us about your eyes</h3><p class="step-description">This sample intake helps demonstrate the questions a clinic may ask.</p>
+            <fieldset class="choice-fieldset"><legend>What brings you in?</legend><div class="radio-pills"><label><input type="radio" name="visitReason" value="Routine eye exam" checked>Routine checkup</label><label><input type="radio" name="visitReason" value="Vision changes">Vision changes</label><label><input type="radio" name="visitReason" value="Eye discomfort">Eye discomfort</label><label><input type="radio" name="visitReason" value="Other">Other</label></div><label id="reason-detail-wrap" class="full-field" hidden>Please describe<input name="reasonDetail" placeholder="What would you like the doctor to know?"></label></fieldset>
+            <fieldset class="choice-fieldset"><legend>Are you experiencing any of these symptoms?</legend><div class="check-pills"><label><input type="checkbox" name="symptoms" value="Itching">Itching</label><label><input type="checkbox" name="symptoms" value="Watery eyes">Watery eyes</label><label><input type="checkbox" name="symptoms" value="Burning">Burning</label><label><input type="checkbox" name="symptoms" value="Pain">Pain</label></div><label id="pain-severity-wrap" class="full-field" hidden>Pain level<select name="painSeverity"><option value="">Choose one</option><option>Mild</option><option>Moderate</option><option>Severe</option></select></label></fieldset>
+            <div class="field-grid compact-grid"><fieldset class="choice-fieldset"><legend>Have you been diagnosed with glaucoma?</legend><div class="radio-inline"><label><input type="radio" name="glaucoma" value="Yes">Yes</label><label><input type="radio" name="glaucoma" value="No" checked>No</label><label><input type="radio" name="glaucoma" value="Not sure">Not sure</label></div></fieldset><fieldset class="choice-fieldset"><legend>Have you had eye surgery?</legend><div class="radio-inline"><label><input type="radio" name="surgery" value="Yes">Yes</label><label><input type="radio" name="surgery" value="No" checked>No</label></div></fieldset></div>
+            <div id="surgery-details" class="conditional-panel" hidden><div class="field-grid"><label class="full-field">Type of surgery<input name="surgeryType" placeholder="For example, cataract surgery"></label><fieldset class="choice-fieldset"><legend>Which eye?</legend><div class="radio-inline"><label><input type="radio" name="surgeryEye" value="Right">Right</label><label><input type="radio" name="surgeryEye" value="Left">Left</label><label><input type="radio" name="surgeryEye" value="Both">Both</label></div></fieldset></div></div>
+            <label class="full-field notes-field">Medications, eye drops, or eye vitamins<textarea name="medications" rows="3" placeholder="List any you take, or write ‘none’"></textarea></label>
+            <fieldset class="choice-fieldset"><legend>Have you visited an eye doctor before?</legend><div class="radio-inline"><label><input type="radio" name="priorVisit" value="Yes">Yes</label><label><input type="radio" name="priorVisit" value="No" checked>No</label></div><div id="prior-visit-details" class="field-grid prior-details" hidden><label>Approximate date<input name="lastVisit" type="month"></label><label>Reason for that visit<input name="priorReason" placeholder="Routine exam, concern, etc."></label></div></fieldset>
+            <div class="form-controls"><button class="button button-quiet previous-step" type="button">← Back</button><button class="button button-dark" type="submit">Review sample request <span>↗</span></button></div>
+          </section>
+          <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <p class="privacy-note"><span aria-hidden="true">▣</span> Demo only: information is not transmitted or stored.</p>
+        </form>
+        <aside class="booking-aside"><div class="aside-card appointment-summary"><p class="eyebrow">YOUR SAMPLE VISIT</p><div class="summary-icon">✳</div><h3>A little time<br>for your vision.</h3><p>Pick a sample appointment time and complete the example intake.</p><div class="summary-divider"></div><div class="summary-row"><span>Selected day</span><b id="summary-date">Choose a day</b></div><div class="summary-row"><span>Selected time</span><b id="summary-time">Choose a time</b></div><div class="summary-row"><span>Visit type</span><b>Eye care</b></div></div><div class="help-card"><span class="help-icon">?</span><div><b>Need to ask a question?</b><p>Call the sample office at <a id="phone-link" href="tel:+17185550100">(718) 555-0100</a></p></div></div><p class="urgent-note">This demo is not monitored. For an urgent eye concern, contact a real care provider or emergency services.</p></aside>
+      </div>
+    </section>
+    <section id="insurance" class="insurance-section"><div class="wrap insurance-inner"><div><p class="eyebrow">PAYMENT, MADE CLEAR</p><h2>Know what to<br><em>expect.</em></h2><p class="insurance-copy">Coverage and costs can vary by plan and visit. This sample list is editable and hasn’t been verified with any insurer.</p><a class="text-link" href="#booking">Start with a sample visit <span>↗</span></a></div><div class="insurance-card"><div class="insurance-card-head"><span>EXAMPLE PLANS</span><span class="sample-tag">NOT VERIFIED</span></div><ul id="insurance-list" class="insurance-list"></ul><div class="sample-fees"><span>SELF-PAY EXAMPLES</span><div><b>New patient</b><strong id="display-new-price"></strong></div><div><b>Follow-up</b><strong id="display-followup-price"></strong></div></div><p class="tiny-note">All plan names and prices are fictional placeholders for this portfolio demo.</p></div></div></section>
+    <section id="office" class="office-section wrap"><div class="office-copy"><p class="eyebrow">COME SAY HELLO</p><h2>A clearer view<br>starts <em>here.</em></h2><p>We look forward to meeting you. Add the verified office address and contact information before using this design for a real clinic.</p><a id="directions-link" class="button button-dark" href="#booking">Find an appointment <span>↗</span></a></div><div class="office-card"><div class="map-art" aria-hidden="true"><div class="map-grid"></div><div class="map-pin">✳</div><span class="map-label">HIGH VISION</span></div><div class="office-details"><p class="eyebrow">OUR OFFICE <span class="sample-tag">SAMPLE DETAILS</span></p><p id="office-address" class="office-address">Office address to be added</p><p id="office-hours" class="office-hours">Sample hours: Monday–Friday · 8:30 AM–5:00 PM</p><a id="office-phone" href="tel:+17185550100">(718) 555-0100</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-main"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 32"><path d="M2 16S9 4 22 4s20 12 20 12-7 12-20 12S2 16 2 16Z"/><circle cx="22" cy="16" r="7"/><circle class="pupil" cx="22" cy="16" r="2.4"/></svg></span><span class="brand-name">High Vision <small>OPHTHALMOLOGY</small></span></a><p>A fictional practice concept.<br>Designed with care for a clearer view.</p><a class="footer-top" href="#home">Back to top ↑</a></div><div class="wrap footer-bottom"><span>© <span id="year"></span> High Vision Ophthalmology</span><span>Portfolio demo · No appointments are booked · No information is stored</span></div></footer>
+</body>
+</html>
